@@ -1,9 +1,7 @@
-# COSC 303 Challenge 06 starter - C++ vacuum API and Python connector
+# COSC 303 - C++ vacuum API and Python connector
 
-Prepared for [Your name] (CH), with [Partner name(s)].
 
-**This is an explicit mock prototype. It contains no j8 Wi-Fi client and does
-not move a physical vacuum.** It is a compilable early contribution toward the
+This is an early contribution toward the
 C++ interface and Python integration milestones. Hardware capabilities are
 unverified; see `docs/feasibility.md` before promising route-following.
 
