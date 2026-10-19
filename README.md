@@ -54,9 +54,7 @@ unavailable bumper are null. Hardware mode is deliberately rejected.
 The test suite checks the idealized route, connection lifecycle, units/heading,
 input failures without mutation, explicit mock capabilities, protocol recovery,
 rejection of nonexistent hardware mode, nonfinite input, and timeout/protocol
-failure cleanup. This session's prepared version passed nine tests in a Linux
-container. You must run it on your actual lab/Pi system; no target build or
-hardware test is claimed.
+failure cleanup. Test passed in linux not on pi.
 
 ## Proposed system design
 
@@ -72,40 +70,8 @@ simulator; it has no walls, collision detection, pathfinding, timing, drift, or
 physical execution. Python retains algorithm/decision ownership; C++ implements
 supported operations. No start-cleaning command substitutes for drive/rotate.
 
-## Before lab / submission
 
-1. Replace author/partner and deadline placeholders. Review all generated code,
-   explain it, and make any individual implementation changes needed. Follow
-   your course policy for assistance and document your actual contribution.
-2. Run `make test` and `make demo` yourself. Record your system, actual results,
-   and personal review/development time. Do not claim assistant runtime as hours.
-3. Add these files to your team's existing repository. Do not replace a teammate's
-   Makefile, README, or source tree wholesale: merge this starter deliberately.
-4. Commit and push; then fill the repository/commit links in both text files.
-   This package has NOT been committed to a shared repository.
-5. Discuss the plan and current working code with a TA. Record actual feedback
-   and lab attendance. An outside-lab time total does not prove lab participation.
-6. Upload only `challenge06-CH-submission.txt` to Canvas after updating it. It
-   already includes the complete milestone rubric. If you revise the rubric,
-   update the appended copy too and retain the original lab version in Git.
 
-Suggested commands from your shared repository root, after merging files:
-```sh
-git status
-git switch -c ch06-ch
-make test
-make demo
-git add milestones-CH.txt challenge06-CH-submission.txt Makefile .gitignore README.md cpp python tests docs
-git diff --cached
-git commit -m "Add CH milestones and C++ mock vacuum API with Python bridge"
-git push -u origin ch06-ch
-git rev-parse HEAD
-```
-Use your team's actual branch workflow; branch and commit names above are
-suggestions. Do not stage binaries, credentials, or unrelated teammate changes.
-For a commit link use your repository provider's actual commit URL. Branch
-creation/push require the existing team repository and your access; none was
-attempted here because no repository URL was provided.
 
 ## What remains
 
