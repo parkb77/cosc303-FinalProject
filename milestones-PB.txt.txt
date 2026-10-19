@@ -1,0 +1,33 @@
+Progress Summary:
+So far, only the general project outline has been completed. We spent majority of our time planning out the methodology of implementation rather than the actual implementation. Due to our project including hardware usage (Roomba), the initial stages of the project simply included understanding how the Roomba operated and how we can send it instruction along with discussing general project architecture.  
+
+Reflection and next-step plan:
+Understanding how the Roomba operated went well. We decided to move towards only creating nodes for the obstacles, start, and destination rather than for every point on the Roombas grid to optimize path finding. We still plan on using Dijkstra's algorithm and an adjacency matrix to implement the path finding. As of right now, no additional help is needed.
+
+Shared Repo:
+https://github.com/parkb77/cosc303-FinalProject.git
+
+Individual Code Contribution:
+As we have yet to implement any code (as a result of needing to complete Dijkstra's Algorithm Lab first), I have no proof of compilable code thus far. However, the general architecture and intended files/scripts can be seen in the Git repo. 
+
+Time Log:
+10/15 : 1 HR discussing implementation
+Project Outline : 2 HR
+Chal 6 / Lab: 1 HR
+(personally) Learning python for Dijkstra's Implementation - 2 HR
+
+	Personal TODO:
+	Implement Dijkstra's Algorithm: ~ 4-5 HR
+	Create GUI: ~ 2 HR
+	Connect RP to Roomba: ~ 1 HR
+	Total Debugging: ~ 2 HR
+	
+
+
+Milestone Rubric:
+
+1. Roomba Mechanism Research and Architecture Design - Complete - Study hardware operation, communication methodology, and optimal node mapping. - 5 Points
+
+2. Dijkstra's Algorithm Implementation in Python - In Progress - Implementing core pathfinding logic using an adj matrix. Must complete Project 4 first. - 20 Points
+
+3. GUI and Raspberry Pi Integration - Planned - Help build the user interface and establish communication between Raspberry Pi, user, and Roomba to input obstacle, start, and stop locations as well as a polling location update. - 15 Points
