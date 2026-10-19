@@ -1,0 +1,114 @@
+COSC 303 - INDIVIDUAL FINAL PROJECT MILESTONES (40 POINTS)
+Student: Casey Higgins     Initials: CH
+Partner(s): Parker Babb
+Shared repository: https://github.com/parkb77/cosc303-FinalProject
+Challenge deadline: OCT 22 2026     Final project deadline: DEC 02 2026
+Version: Initial proposed rubric; lab submission/revision dates to be supplied.
+
+PROJECT
+A Python application will let a user define a grid, start/goal, and digital
+barriers, compute a shortest route, and visualize it. The intended physical
+demonstration is a Roomba j8 following that route in an open area. A battery-
+powered Raspberry Pi running Raspberry Pi OS is the intended deployment host.
+The Clean Base is the existing charging/disposal dock, not an assumed controller.
+
+MY PRIMARY RESPONSIBILITIES
+Design and implement the C++ robot API, its connection/telemetry boundary, and
+the Python connector that calls it. Coordinate units, commands, failures, and
+integration with the partner's simulator. Assist with simulator/UI integration;
+maze generation, pathfinding, and primary UI implementation remain partner-led
+unless the team explicitly reallocates them.
+
+TECHNICAL DEPENDENCY / EARLY DECISION
+Wi-Fi connection, position reporting, and direct steering are separate
+capabilities. Exact j8 firmware compatibility, live pose, bumper reporting,
+and distance/angle commands have NOT been demonstrated. The first milestone
+must establish what this particular robot supports. Proposed movement API:
+drive(double distance_m), rotate(double angle_rad). Meters and radians are OUR
+contract; raw robot units and coordinate frame require measurement/verification.
+
+Milestone 1 - Hardware feasibility and API contract                 6 points
+  2: Record exact model/firmware and sourced evidence of available interface.
+  2: Record observed connection/command/telemetry capabilities, including
+     unsupported or unverified features and reproducible experiment notes.
+  2: Agree with parker on units, coordinate frame, responses, and go/no-go plan.
+Evidence: docs/feasibility.md plus dated hardware observations and team decision.
+Target: Next work session, before substantial hardware implementation.
+Timebox: Initial 2-3-hour investigation, then discuss unresolved blockers with TA.
+A documented negative finding can satisfy this milestone; it does
+not satisfy later hardware implementation milestones.
+
+Milestone 2 - C++ API design and compilable mock backend            6 points
+  2: Separate class interface from backend implementation; reproducible build.
+  2: Stateful mock connect/disconnect, drive, rotate, pose, and stop operations.
+  2: Validate input/state and explicitly identify mock results/unknown sensors.
+Evidence: cpp/include/robot_api.hpp, cpp/src/, Makefile, working demonstration.
+Target: Challenge 06 code checkpoint; starter supplied, review/test/commit needed.
+
+Milestone 3 - Native C++ hardware connection/session handling       8 points
+  2: Configure endpoint and credentials outside committed source code.
+  3: Implement an authenticated connection using a selected native MQTT/TLS
+     library or another interface actually verified for this j8.
+  3: Demonstrate telemetry subscription, bounded connection failures, clean
+     disconnect, and a reconnect policy that does not replay stale motion.
+Evidence: hardware backend, sanitized logs, and deployment/build instructions.
+Target: After milestone 1; before physical route integration.
+
+Milestone 4 - Telemetry and coordinate conversion                  6 points
+  2: Parse observed feedback; retain source, validity, and sample timing.
+  2: Validate available position/heading conversion against measured movement,
+     or implement/test an agreed replacement localization source.
+  2: Expose structured state; unavailable/stale pose or bumper data must be
+     represented as unknown/unavailable, never fabricated measurements.
+Evidence: hardware samples, conversion tests/calibration, documented limitations.
+Target: After authenticated feedback; before closed-loop navigation.
+If no localization source is feasible, request a documented scope revision.
+
+Milestone 5 - Python subprocess connector and shared protocol      6 points
+  2: Persistent C++ child process, framed requests/replies, and request IDs.
+  2: Python command methods, numeric validation, timeout/failure propagation,
+     and cleanup without mixing diagnostics into response stdout.
+  2: Integrate connector calls with partner code; demonstrate backend/source
+     labeling and errors reaching the caller.
+Evidence: python/connector.py, docs/protocol.md, tests and integration demo.
+Target: Mock integration at Challenge 06, partner integration afterward.
+
+Milestone 6 - Verified movement and route integration              5 points
+  2: Implement drive/rotate using a VERIFIED steering interface, with stop,
+     bounded duration/completion handling, and explicit unsupported errors.
+  2: Demonstrate a short planned physical route and record target vs observed
+     position/heading using an agreed measurement method.
+  1: Agree/test grid-to-world conversion and failure reporting with partner.
+Evidence: supported commands, observed route results, partner integration notes.
+Target: Before final demonstration; depends on milestones 1, 3, 4, and 5.
+A mock route alone does not complete this hardware milestone.
+
+Milestone 7 - Validation, deployment, and handoff                   3 points
+  1: Repeatable automated tests covering successful and failing API exchanges.
+  1: Build/run documentation and demonstration on Raspberry Pi or lab system.
+  1: Individual contribution references, final limitations, and handoff notes.
+Evidence: tests/, README.md, test output, repository commits and final report.
+Target: Tests during development; deployment and handoff before final submission.
+
+TOTAL: 6 + 6 + 8 + 6 + 6 + 5 + 3 = 40 POINTS
+Points are proposed rubric weights.
+
+SCOPE-CHANGE RULE
+If j8 steering or localization cannot be verified, discuss the blocker with the
+TA promptly. Possible proposed revisions: use a supported robot platform or
+make route execution simulation-only while retaining real j8 mission control.
+Neither alternative is assumed approved. Record the date, reason, revised
+40-point allocation, and TA/team agreement. Do not silently substitute a mock
+for a promised physical demonstration or erase the initial lab rubric.
+
+CURRENT STATUS
+approximately 2h Roomba API research, 2h planning discussion with
+drawings, and 1h Raspberry Pi preparation. These are not hardware-control proof.
+Prepared: C++11 mock API, Python connector, tests, build files,
+and documentation. 
+Review/understanding, lab/Pi validation, hardware tests are outstanding.
+
+
+REVISION LOG
+10/18/2026 Initial rubric submitted during lab: Challenge 06
+//[DATE] Later revision, if any: [change, reason, obstacle, TA/team discussion]
