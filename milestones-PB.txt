@@ -36,6 +36,7 @@ Milestone Rubric:
 	- Prioritize few turns as possible (traverse all x, then y) as they account for most of the time variation. Travel between nodes is the same for each (1m apart) 
 	-Each index is a node. that also holds a T/F of traversable 
 	- If start / stop location fully blocked in, "NO PATH" 
+	-Output String/char of Turn L/R and Drive (Z) units. 
 
 	
 
