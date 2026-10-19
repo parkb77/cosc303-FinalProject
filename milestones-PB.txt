@@ -43,3 +43,6 @@ Milestone Rubric:
 3. GUI and Raspberry Pi Integration - Planned - Help build the user interface and establish communication between Raspberry Pi, user, and Roomba to input obstacle, start, and stop locations as well as a polling location update. - 15 Points
 	-GUI Hosted on PI?
 	-Drag / drop set obstacles onto map. 
+	-Python Library "Nice GUI" UI
+	-Python "FAST API"  API
+	- 
