@@ -27,7 +27,15 @@ Chal 6 / Lab: 1 HR
 Milestone Rubric:
 
 1. Roomba Mechanism Research and Architecture Design - Complete - Study hardware operation, communication methodology, and optimal node mapping. - 5 Points
+	- Roomba operates in Rotate(radians) and Move directions in meters (post modifcation)
 
 2. Dijkstra's Algorithm Implementation in Python - In Progress - Implementing core pathfinding logic using an adj matrix. Must complete Project 4 first. - 20 Points
+	- Read in grid size, stop, and obstacle locations from GUI
+	- Start location = (0,0) , where dock is? Returns to dock after a run is complete
+	- Make Matrix in Quad1, Matrix is 2d Array of structs where each holds a boolean of "can be visited" 
+	- Prioritize few turns as possible (traverse all x, then y) as they account for most of the time variation. Travel between nodes is the same for each (1m apart) 
+
+	
 
 3. GUI and Raspberry Pi Integration - Planned - Help build the user interface and establish communication between Raspberry Pi, user, and Roomba to input obstacle, start, and stop locations as well as a polling location update. - 15 Points
+	-GUI Hosted on PI?
