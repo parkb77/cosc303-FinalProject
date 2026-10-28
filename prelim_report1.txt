@@ -29,7 +29,7 @@ Implementation approach of Dijkstra's Algorithm (~4hr w/counting completion of l
 Researching UI Design (~1hr PB)
     - YouTube Tutorials + AI questioning for basic python GUI design using tkinter
     - Best as no backend experience is needed, need to further research implementation methodology
-    - Needs to output a grid and send data to Dijkstra's 
+    - Needs to output a user defined grid and send data to Dijkstra's 
 
 Last meeting: (2-3hrs CH, PB)
     - discussed UI plan, features to include (simulation space to place barriers,
