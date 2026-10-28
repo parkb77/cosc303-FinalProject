@@ -1,0 +1,31 @@
+Preliminary Report 1
+Casey Higgins
+Parker Babb
+
+No meetings occurred since last meeting.
+
+Report and Time-log:
+
+Researched hardware and implementation details for raspberry pi to Roomba control: (2-3hrs CH)
+    - found donor Roomba j8 not compatible with dev api
+    - decided to pivot to hardware deconstruction and rebuild
+    - found parts list and purchased necessary hardware (see Roomba modifications.md)
+    - made hardware teardown and rebuild checklist/test
+    - found many instructables and written projects for reference
+    
+Researched support for c++ API from PI to TB6612FNG Dual Motor Driver Controller Board: (1hr CH)
+    - confirmed feasibility for rasp pi can control Roomba via c++
+    
+Planned python -> c++ interface using python stdlib subprocess: (1hr CH)
+    - implement subprocess availability for python to call c++ and control Roomba
+    - make python to c++ interface separate from UI and algorithm runtime uses compiled
+      instructions dropped from algo run to c++ controller and move Roomba
+
+
+Last meeting: (2-3hrs CH, PB)
+    - discussed UI plan, features to include (simulation space to place barriers,
+      run pathing button, start Roomba motion, optional reset to home?)
+    - discussed simulation space (scale and how to setup nodes/matrix)
+    - discussed relationship and data flow within entire system, as well as confirmed 
+      software/library stack for implementing python UI, API, and interfacing with c++ 
+      to Roomba controller.
