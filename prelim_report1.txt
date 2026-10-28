@@ -21,6 +21,14 @@ Planned python -> c++ interface using python stdlib subprocess: (1hr CH)
     - make python to c++ interface separate from UI and algorithm runtime uses compiled
       instructions dropped from algo run to c++ controller and move Roomba
 
+Implementation approach of Dijkstra's Algorithm (~4hr w/counting completion of lab, PB) 
+    - Completed the Dijkstra's Lab with a strong understanding the algorithm's implementation as planned
+    - Determined how the design can be modified to fit our needs
+    - Decided on optimal input/output format for the program. 
+
+Researching UI Design (~1hr PB)
+    - YouTube Tutorials + AI questioning for basic python GUI design using tkinter
+    - Best as no backend experience is needed, need to further research implementation methodology
 
 Last meeting: (2-3hrs CH, PB)
     - discussed UI plan, features to include (simulation space to place barriers,
