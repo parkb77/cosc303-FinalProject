@@ -51,7 +51,7 @@ def shortest_path(matrix, start, goal):
             queue.append(v) 
 
     if not found: 
-        return None #No path to goal 
+        return "No Path Found" #No path to goal 
     
     #Traverse parent[] from goal -> start, reverse 
     path = []
