@@ -13,7 +13,7 @@ def neighbors(matrix, width, height, x, y):
     for dx, dy in DIRS: 
         nx, ny = x + dx, y + dy
         if 0 <= nx < width and 0 <= ny < height and matrix[ny][nx] == FREE:
-            yield nx, ny
+            yield nx, ny #One item stored in memory at a time, not a "final result" (googled)
 
 #BFS, returns list of (x,y) nodes from start to goal or none
 def shortest_path(matrix, start, goal): 
