@@ -11,3 +11,9 @@ Parker Babb:
 11/11 2HR: Finished BYODS Powerpoint and started GUI 
 11/16 2HR: Finished first draft of GUI with tkinter
 
+Casey Higgins:
+11/4 4HR : Hardware Teardown of roomba and wiring plan. Loaded Raspi make sure it is updated
+11/6 2HR : Plan and c++ api to output to Raspi pins
+11/9 4HR : Did initial test for motor inputs/outputs to design finalize wiring
+11/13 4HR : Second round of testing (motor motion woooooh) found operating thresholds for most hardware. After BYODs presentation Dr Emrich's comment on object detection we plan to have some LED's for error and object detection. 
+11/16 1HR : With outputs planned and commands handoff from python gui began coding c++ api
