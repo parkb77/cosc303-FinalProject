@@ -1,1 +1,13 @@
+Preliminary Report 1
+Casey Higgins
+Parker Babb
+
+Parker Babb:
+11/2 2HR : Working on implementation of Dijkstra's algorithm 
+11/6 1HR: Revised plan on how desired input / output. Determined neighbors should be calculated as we go rather than all at once to save computational time on such a large grid. Determined Big O of chosen data structures. 
+11/8 1HR: Implemented map generate, neighbor checking, and minheap implementation of DijkstrasProj.py
+11/9 3HR: Realized that BFS is way more efficient and practical for this type of problem as all edges are of weight 1. Restarted the program, revised approach, started pathfinding.py, re-evaluated Big O, started BYODS presentation. 
+11/10 2HR: Finished v1.0 of pathfinding.py 
+11/11 2HR: Finished BYODS Powerpoint and started GUI 
+11/16 2HR: Finished first draft of GUI with tkinter
 
