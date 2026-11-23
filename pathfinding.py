@@ -82,3 +82,57 @@ def path_to_commands(path, heading=0):
     #returns list of commands and direction being faced at end (heading)
     #Unsure how we will handle returning to dock as of rn? Code needed or can it just do that?
     return commands, heading 
+
+#Test 1: Straight Path
+""""
+matrix = [
+    [0, 0, 0, 0, 0]
+]
+
+start = (0, 0)
+goal = (4, 0)
+
+path = shortest_path(matrix, start, goal)
+print("Path:", path)
+
+if path is not None:
+    print("Commands:", path_to_commands(path))
+"""
+
+#Test 2: Obstacle
+
+matrix = [
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0]
+]
+
+start = (0, 1)
+goal = (4, 1)
+
+path = shortest_path(matrix, start, goal)
+print("Path:", path)
+
+if path is not None:
+    print("Commands:", path_to_commands(path))
+
+
+#Test 3: No Path
+"""
+matrix = [
+    [0, 0, 0],
+    [1, 1, 1],
+    [0, 0, 0]
+]
+
+start = (0, 0)
+goal = (2, 2)
+
+path = shortest_path(matrix, start, goal)
+print("Path:", path)
+
+if path is not None:
+    print("Commands:", path_to_commands(path))
+else:
+    print("No path found.")
+    """
