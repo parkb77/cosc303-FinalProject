@@ -147,8 +147,11 @@ class Course:
             self.calc_ms, self.search_failed = ms, True
             self.say("No path found: the stop is walled off.", "error")
             return
-        full = path + path[::-1][1:] if self.return_to_start else path   # Return -> reversed path
-        commands, _heading = path_to_commands(full)
+        full = path + path[::-1][1:] if self.return_to_start else path   # Return -> reversed path. Ensures end direction is east 
+        commands, heading = path_to_commands(full)
+        if self.return_to_start:
+            turn = (0 - heading) % 4          # 0 = east
+            commands.extend({0: [], 1: ["CC"], 2: ["CC", "CC"], 3: ["CW"]}[turn])
         ms = (time.perf_counter() - started) * 1000          # Stop timer
         self.path, self.commands = path, commands
         self.route_ready, self.uploaded = True, False
