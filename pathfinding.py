@@ -73,7 +73,7 @@ def path_to_commands(path, heading=0):
             if run: 
                 commands.append(str(run)) 
             turn = (d - heading) % 4 #1 = CC, 2 = CC CC, 3 = CW. 0 Not possible as d != heading checked
-            commands.extend({1 : ["CC"], 2: ["CC", "CC"], 3: ["CW"]}[turn]) #Google for how to implement this logic in python
+            commands.extend({1: ["CC"], 2: ["CC", "CC"], 3: ["CW"]}[turn]) #Google for how to implement this logic in python
             heading = d #Update current direction
             run = 0 #Reset run
         run += 1
@@ -100,7 +100,7 @@ if path is not None:
 """
 
 #Test 2: Obstacle
-
+"""
 matrix = [
     [0, 0, 0, 0, 0],
     [0, 1, 1, 1, 0],
@@ -115,7 +115,7 @@ print("Path:", path)
 
 if path is not None:
     print("Commands:", path_to_commands(path))
-
+"""
 
 #Test 3: No Path
 """
